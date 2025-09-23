@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>西洋棋</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div class="app">
+		<h1>西洋棋</h1>
+		<div class="status-bar">
+			<span id="turn-indicator">白方行棋</span>
+			<button id="reset-btn" type="button">重新開始</button>
+		</div>
+		<div class="board-row">
+			<div class="captures" id="captures-left" aria-label="Captured pieces">
+				<div class="cap-section">
+					<div class="cap-list" id="cap-black"></div>
+					<div class="cap-score" id="score-black"></div>
+				</div>
+				<div class="cap-section">
+					<div class="cap-score" id="score-white"></div>
+					<div class="cap-list" id="cap-white"></div>
+				</div>
+			</div>
+			<div id="chessboard" class="board" aria-label="Chessboard" role="grid" tabindex="0"></div>
+		</div>
+		<div class="helpers">
+			<label><input type="checkbox" id="show-legal" checked> 顯示合法步</label>
+		</div>
+	</div>
+
+	<!-- 勝利/和棋 覆蓋層 -->
+	<div id="overlay" class="overlay" hidden>
+		<div class="modal">
+			<div id="result-text">對局結束</div>
+			<div class="modal-actions">
+				<button id="play-again" type="button">再玩一次</button>
+			</div>
+		</div>
+	</div>
+	<script src="main..js"></script>
+</body>
+</html>
